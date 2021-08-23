@@ -1,11 +1,13 @@
-cdp4j - Browser automation libray for Java
-==========================================
+cdp4j -  Automation library for Chromium based Browsers
+=========================================================
 
-cdp4j is Java library with a clear and concise API to automate Chrome/Chromium based browser. It use Google Chrome DevTools Protocol to automate Chrome/Chromium based browsers.
+cdp4j is **Java** library with a clear and concise API to automate Chrome/Chromium based browser.
+It use [Google Chrome DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/) to automate Chrome/Chromium based browsers.
 
 What can you do with cdp4j?
 ---------------------------
-Most things that you can do manually in the browser can be done using cdp4j. Here are a few examples to get you started:
+Most things that you can do manually in the browser can be done using cdp4j.
+Here are a few examples to get you started:
 
 * Generate screenshots and PDFs of pages.
 * Crawl a Single-Page Application and generate pre-rendered content (Server-Side Rendering).
@@ -17,10 +19,10 @@ How to run examples?
 --------------------
 1. Download the [archive](https://github.com/webfolderio/cdp4j/archive/refs/heads/master.zip) file.
 2. Extract the archive file.
-3. Launch the Eclipsle and import the project (*File -> Import > Existing Projects into Workspace*)
+3. Launch the [Eclipse IDE](https://www.eclipse.org/ide/) and import the project (*File -> Import > Existing Projects into Workspace*)
 4. Launch the Intellij and [import the Eclipse project](https://www.jetbrains.com/help/idea/import-project-from-eclipse-page-1.html).
 
-Main Features
+Major Features
 -------------
 * Supports full capabilities of the Chrome DevTools Protocol ([tip-of-tree](https://chromedevtools.github.io/debugger-protocol-viewer/tot/))
 * PDF printer
@@ -28,6 +30,7 @@ Main Features
 * Invoke JavaScript function
 * Invoke Java function from Browser (JavaScript)
 * Supports native CSS selector engine
+* Supports Playwright [selectors](https://playwright.dev/docs/selectors)
 * iframe support
 * Supports XPath queries
 * Incognito Browsing (private tab)
@@ -36,16 +39,15 @@ Main Features
 * Auto-Wait for DOM change completion
 * Trigger Mouse events (click etc...)
 * Send keys (text, tab, enter etc...)
-* playwright [selectors](https://playwright.dev/docs/selectors)
 * Redirect log entries (javascript, network, storage etc...) from browser to slf4j, log4j, jul, log4j2 or console logger.
 * Intercept Network traffic (request & response)
 * Upload file programmatically without third party solutions (does not requires AWT Robot etc...)
-* get & set Element properties
+* Get & set Element properties
 * Supports Headless Chrome/Chromium
 * Navigate back, forward, stop, reload
-* clear cache, clear cookies, list cookies
-* set & get values of form elements
-* Supports event handling
+* Clear cache, clear cookies, list cookies
+* Set & get values of HTML form elements
+* Supports DOM event handling
 * Supports all well known Java WebSocket libraries.
 
 Supported Java Versions
@@ -96,12 +98,14 @@ DevTools Protocol uses WebSocket protocol to automate Chromium based browser. We
 * Tomcat
 * Netty
 * NvWebSocket
+* libuv
 
 __Note:__ Please let us know if your preferred WebSocket library is not listed.
 
 Examples
 -------
-We provide many [examples](https://github.com/webfolderio/cdp4j/tree/master/src/io/webfolder/cdp/sample) to show how to use cdp4j library. It's highly recommended to run these examples before starting to use cdp4j.
+We provide many [examples](https://github.com/webfolderio/cdp4j/tree/master/src/io/webfolder/cdp/sample) to show how to use cdp4j library.
+It's highly recommended to run these examples before starting to use cdp4j.
 
 Design Principles
 -----------------
@@ -113,9 +117,10 @@ Design Principles
 
 How it is tested
 ----------------
-cdp4j is regularly built and tested on Windows 10 and Ubuntu.
+cdp4j is regularly built and tested on Windows 10, Ubuntu, Centos and macOS.
 
 Support & Bug Report
 --------------------
-Please report your bugs and new features by e-mail ([support@webfolder.io](mailto:support@webfolder.io)). github issues is only used by cdp4j developers.
+Please report your bugs and new features by e-mail ([support@webfolder.io](mailto:support@webfolder.io)).
+GitHub issues is only used by cdp4j developers.
 

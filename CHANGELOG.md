@@ -10,7 +10,7 @@ cdp4j Release Notes
 
 * Improved libuv-java performance
 * Updated Playwright [selectors](https://playwright.dev/docs/selectors) version to 1.9.2
-* Removed TaskKillProcessManager.java (Child processes still runs after the parent dies if chrome is executed with headless mode. This problem does not exist for headful mode.)
+* Deprecated TaskKillProcessManager.java (Child processes still runs after the parent dies if chrome is executed with headless mode. This problem does not exist for headful mode.)
 * Added a new Launcher class that will support POSIX spawn ([yeshup](https://github.com/webfolderio/yeshup)).
 * Updated DevTools protocol to version r882921.
 * WfExecLauncher is used as a default ProcessManger for Windows enviorment.

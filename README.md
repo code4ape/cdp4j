@@ -22,8 +22,8 @@ How to run examples?
 3. Launch the [Eclipse IDE](https://www.eclipse.org/ide/) and import the project (*File -> Import > Existing Projects into Workspace*)
 4. Launch the Intellij and [import the Eclipse project](https://www.jetbrains.com/help/idea/import-project-from-eclipse-page-1.html).
 
-Major Features
--------------
+These are Some of the Problems We Help Developers Solve
+-------------------------------------------------------
 * Supports full capabilities of the Chrome DevTools Protocol ([tip-of-tree](https://chromedevtools.github.io/debugger-protocol-viewer/tot/))
 * PDF printer
 * Evaluate JavaScript

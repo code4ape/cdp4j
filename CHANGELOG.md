@@ -3,12 +3,16 @@ cdp4j Release Notes
 
 ### Roadmap
 
-* Remove libuv-java support
 * Add project loom support ([virtual threads](https://blogs.oracle.com/javamagazine/going-inside-javas-project-loom-and-virtual-threads))
 * Add spring support ([WebSocketClient](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/socket/client/WebSocketClient.html))
-* Update Playwright [selectors](https://playwright.dev/docs/selectors) to 1.9.2
-* Remove TaskKillProcessManager.java (Child processes still runs after the parent dies if chrome is executed with headless mode. This problem does not exist for headful mode.)
-* Add a new Launcher class that will support POSIX spawn.
+
+### 5.4.0 - August 24, 2021
+
+* Improved libuv-java performance
+* Updated Playwright [selectors](https://playwright.dev/docs/selectors) version to 1.9.2
+* Removed TaskKillProcessManager.java (Child processes still runs after the parent dies if chrome is executed with headless mode. This problem does not exist for headful mode.)
+* Added a new Launcher class that will support POSIX spawn ([yeshup](https://github.com/webfolderio/yeshup)).
+* Updated DevTools protocol to version r882921.
 
 ### 5.3.1 - March 26, 2021
 

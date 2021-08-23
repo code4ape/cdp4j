@@ -13,6 +13,7 @@ cdp4j Release Notes
 * Removed TaskKillProcessManager.java (Child processes still runs after the parent dies if chrome is executed with headless mode. This problem does not exist for headful mode.)
 * Added a new Launcher class that will support POSIX spawn ([yeshup](https://github.com/webfolderio/yeshup)).
 * Updated DevTools protocol to version r882921.
+* WfExecLauncher is used as a default ProcessManger for Windows enviorment.
 
 ### 5.3.1 - March 26, 2021
 

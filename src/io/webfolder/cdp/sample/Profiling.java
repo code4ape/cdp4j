@@ -10,8 +10,9 @@ import io.webfolder.cdp.event.tracing.DataCollected;
 import io.webfolder.cdp.listener.EventListener;
 import io.webfolder.cdp.session.Session;
 import io.webfolder.cdp.session.SessionFactory;
-import io.webfolder.cdp.type.constant.TransferMode;
+import io.webfolder.cdp.type.constant.TracingTransferMode;
 import io.webfolder.cdp.type.tracing.StreamFormat;
+import io.webfolder.cdp.type.tracing.TracingBackend;
 
 public class Profiling {
 
@@ -25,10 +26,12 @@ public class Profiling {
             tracing.start("*", // * => trace all types of categories
                           "sampling-frequency=10000",
                           500D,
-                          TransferMode.ReportEvents,
+                          TracingTransferMode.ReportEvents,
                           StreamFormat.Json,
                           null,
-                          null);
+                          null,
+                          null,
+                          TracingBackend.Auto);
 
             session.navigate("https://webfolder.io/");
             session.waitDocumentReady();

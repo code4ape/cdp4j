@@ -10,7 +10,9 @@ import io.webfolder.cdp.session.WaitUntil;
 public class SharedSession {
 
     public static void main(String[] args) {
-        Options options = Options.builder().loggerType(CdpLoggerType.Slf4j).build();
+        Options options = Options.builder()
+        							.loggerType(CdpLoggerType.Console)
+    							.build();
 
         Launcher launcher = new Launcher(options);
 

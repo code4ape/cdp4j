@@ -49,6 +49,7 @@ These are Some of the Problems We Help Developers Solve
 * Set & get values of HTML form elements
 * Supports DOM event handling
 * Supports all well known Java WebSocket libraries.
+* Export page as [MHTML](https://en.wikipedia.org/wiki/MHTML) file.
 
 Supported Java Versions
 -----------------------

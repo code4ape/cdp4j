@@ -6,7 +6,7 @@ import io.webfolder.cdp.Launcher;
 import io.webfolder.cdp.Options;
 import io.webfolder.cdp.channel.ChannelFactory;
 import io.webfolder.cdp.channel.DevToolsProfileConnection;
-import io.webfolder.cdp.channel.JreWebSocketFactory;
+import io.webfolder.cdp.channel.NvWebSocketFactory;
 import io.webfolder.cdp.session.Session;
 import io.webfolder.cdp.session.SessionFactory;
 
@@ -35,7 +35,7 @@ public class DevToolsProfileConnectionExample {
         
         Options options = Options.builder().build();
 
-        ChannelFactory webSocketFactory = new JreWebSocketFactory();
+        ChannelFactory webSocketFactory = new NvWebSocketFactory();
 
         SessionFactory factory = new SessionFactory(options, webSocketFactory, connection);
 

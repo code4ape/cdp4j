@@ -1,0 +1,13 @@
+<html>
+<head>
+	<title>child iframe 1</title>
+</head>
+<body>
+	<span id="dummy-txt" data-key="foo">child iframe 1</span>
+	<button id="btn">my test button</button>
+	<iframe src="iframe2.html"></iframe>
+	<script type="text/javascript">
+		document.querySelector('#btn').addEventListener('click', function() { console.info('child iframe 1 - btn clicked'); });
+	</script>
+</body>
+</html>

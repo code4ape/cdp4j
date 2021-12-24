@@ -6,6 +6,20 @@ cdp4j Release Notes
 * Add project loom support ([virtual threads](https://blogs.oracle.com/javamagazine/going-inside-javas-project-loom-and-virtual-threads))
 * Add spring support ([WebSocketClient](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/socket/client/WebSocketClient.html))
 
+### 5.4.1 - December 24, 2021
+
+* Updated log4j-core to 2.17.0
+* [new feature] - :new: Added reuseEmptyTab option to SessionSettings. This new option helps to disable reusing empty tabs.
+
+3 New features and 3 bug-fixes contributed by Pascal B., Thanks!
+
+* [new feature] - :new: "loggerNamePrefix" option to separate logging from multiple cdp4j connections (use Options.loggerNamePrefix(String))
+* [new feature] - :new: Support CDP connections using the simplified V8 inspector protocol (use Options.protocolVersion(ProtocolVersion))
+* [new feature] - :new: Do not drop session upon target crash Because a target can be recreated and a Target.targetDestroyed event is trigged, when a crashed target is finally closed
+* [bug-fix] - Fix wrong Target.TargetCrashed value type (see Events.java)
+* [bug-fix] - Added missing enum value to PrivateNetworkRequestPolicy (fixed jackson FormatException: Cannot deserialize value of...)
+* [bug-fix] - Support id-after-error pattern in jackson handler (see JacksonMessageHandler.java)
+
 ### 5.4.0 - August 24, 2021
 
 * Improved libuv-java performance

@@ -1,10 +1,20 @@
 cdp4j Release Notes
 -------------------------------------------------------------------------------
 
-### Roadmap
+### 6.0.0-SNAPSHOT - TBA
 
-* Add project loom support ([virtual threads](https://blogs.oracle.com/javamagazine/going-inside-javas-project-loom-and-virtual-threads))
-* Add spring support ([WebSocketClient](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/socket/client/WebSocketClient.html))
+* Added **async** support to cdp4j. All devtools command could be invoked asynchronously (e.g. session.getAsyncCommand().getNetwork().getCookies().thenApply(cookies -> { });).
+* Fixed, SemaphoreContext throws CdpReadTimeoutException if tryAcquire method fails. Before 6.0.0 cdp4j throws NullPointerException instead of CdpReadTimeoutException.
+  Thank you Marc P. for the bug report.
+* Removed PipeChannelFactory (libuv). Most of the users/customers don't want to use JNI based integratation that's why we removed libuv library from cdp4j.
+* Updated devtools protocol to r953906 (Dec 23, 2021). We will update devtools protocol more often, probably every month or week.
+* Updated external dependencies to latest versions.
+* Added toString method to type, event and result classes (auto generated).
+* Added setRegisteredEventListeners to Session class. cdp4j parse and process all event registered if related domain (Network, Runtime....) is enabled.
+  With this new method, cdp4j process and parse only listened events. This new feature minimize CPU and memory usage. 
+* Changed Options.workerThreadPool(ExecutorService) and Options.eventHandlerThreadPool(ExecutorService) signatures to workerThreadPool(Executor) and eventHandlerThreadPool(Executor).
+* Removed ApplicationCache command and related types which is no longer supported by devtools protocol.
+* Formatted generated codes (type, event, result, command) with Java Google style.
 
 ### 5.4.1 - December 24, 2021
 

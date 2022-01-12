@@ -3,6 +3,7 @@ cdp4j Release Notes
 
 ### 6.0.0-SNAPSHOT - TBA
 
+* Added realtime video recorder.
 * Added **async** support to cdp4j. All devtools command could be invoked asynchronously (e.g. session.getAsyncCommand().getNetwork().getCookies().thenApply(cookies -> { });).
 * Fixed, SemaphoreContext throws CdpReadTimeoutException if tryAcquire method fails. Before 6.0.0 cdp4j throws NullPointerException instead of CdpReadTimeoutException.
   Thank you Marc P. for the bug report.

@@ -3,7 +3,9 @@ cdp4j Release Notes
 
 ### 6.0.0-SNAPSHOT - TBA
 
-* Added realtime video recorder.
+* Added ffmpeg video recorder (uses Slideshow feature)
+* Added realtime video recorder (uses Cisco openh264)
+* Updated Playwright [selectors](https://playwright.dev/docs/selectors) version to 1.17.2
 * Added **async** support to cdp4j. All devtools command could be invoked asynchronously (e.g. session.getAsyncCommand().getNetwork().getCookies().thenApply(cookies -> { });).
 * Fixed, SemaphoreContext throws CdpReadTimeoutException if tryAcquire method fails. Before 6.0.0 cdp4j throws NullPointerException instead of CdpReadTimeoutException.
   Thank you Marc P. for the bug report.

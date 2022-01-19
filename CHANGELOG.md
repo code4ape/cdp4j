@@ -1,23 +1,27 @@
 cdp4j Release Notes
 -------------------------------------------------------------------------------
 
-### 6.0.0-SNAPSHOT - TBA
+### 6.0.0 - TBA
 
-* Added ffmpeg video recorder (uses Slideshow feature)
-* Added realtime video recorder (uses Cisco openh264)
+* :new: Added **async** support to cdp4j. All devtools command could be invoked asynchronously (e.g. session.getAsyncCommand().getNetwork().getCookies().thenApply(cookies -> { });).
+* :new: Added FFmpeg video recorder, uses FFmpeg [slideshow](https://trac.ffmpeg.org/wiki/Slideshow) feature
+* :new: Added H264 realtime video recorder, uses Cisco [openh264](https://github.com/cisco/openh264) & [IHMC Java Video Codecs](https://github.com/ihmcrobotics/ihmc-video-codecs)
+* :new: Updated devtools protocol to r953906 (Dec 23, 2021).
+* :new: Added toString method to type, event and result classes (auto generated).
+* :new: Added setRegisteredEventListeners to Session class. cdp4j parse and process all event registered if related domain (Network, Runtime....) is enabled.
+  With this new method, cdp4j process and parse only listened events. This new feature minimize CPU and memory usage. 
 * Updated Playwright [selectors](https://playwright.dev/docs/selectors) version to 1.17.2
-* Added **async** support to cdp4j. All devtools command could be invoked asynchronously (e.g. session.getAsyncCommand().getNetwork().getCookies().thenApply(cookies -> { });).
 * Fixed, SemaphoreContext throws CdpReadTimeoutException if tryAcquire method fails. Before 6.0.0 cdp4j throws NullPointerException instead of CdpReadTimeoutException.
   Thank you Marc P. for the bug report.
-* Removed PipeChannelFactory (libuv). Most of the users/customers don't want to use JNI based integratation that's why we removed libuv library from cdp4j.
-* Updated devtools protocol to r953906 (Dec 23, 2021). We will update devtools protocol more often, probably every month or week.
 * Updated external dependencies to latest versions.
-* Added toString method to type, event and result classes (auto generated).
-* Added setRegisteredEventListeners to Session class. cdp4j parse and process all event registered if related domain (Network, Runtime....) is enabled.
-  With this new method, cdp4j process and parse only listened events. This new feature minimize CPU and memory usage. 
+* Removed PipeChannelFactory (libuv). Most of the users/customers don't want to use JNI based integratation that's why we removed libuv library from cdp4j.
 * Changed Options.workerThreadPool(ExecutorService) and Options.eventHandlerThreadPool(ExecutorService) signatures to workerThreadPool(Executor) and eventHandlerThreadPool(Executor).
 * Removed ApplicationCache command and related types which is no longer supported by devtools protocol.
 * Formatted generated codes (type, event, result, command) with Java Google style.
+* Improved Jackson json parse performance (see JacksonPerfTest)
+* Removed hideScrollbar param from Session.captureScreenshot() method **BREAKING CHANGE**
+* Removed Domain, EventName and Returns annotations
+* Added more example code snippets. ScreenshotDomElement, VideoRecorderExample, VideoRecorderExampleLibx264, VideoRecorderRealtimeExample
 
 ### 5.4.1 - December 24, 2021
 

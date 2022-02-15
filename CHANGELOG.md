@@ -23,6 +23,18 @@ cdp4j Release Notes
 * Removed Domain, EventName and Returns annotations
 * Added more example code snippets. ScreenshotDomElement, VideoRecorderExample, VideoRecorderExampleLibx264, VideoRecorderRealtimeExample
 
+### 5.5.0 - February 16, 2022
+
+* Added [_UNKOWN_] enum constant to all CDP enums.
+* Added custom Gson TypeAdapter to map unknown enum constants to _UNKNOWN_.
+* Added custom Jackson DeserializationProblemHandler to map unkown enum constants to _UNKOWN_.
+* Added GsonUnkownEnumValueTest & JacksonUnkownEnumValueTest.
+* :new: Added DOM.enable(includeWhitespace) method.
+* :new: Added a new helper class to download latest version of Chromium browser.
+  Please see ChromiumDownloader for example usage.
+
+Note: Thanks to Pascal B., for his suggestion to handling unknown enum constants.
+
 ### 5.4.1 - December 24, 2021
 
 * Updated log4j-core to 2.17.0

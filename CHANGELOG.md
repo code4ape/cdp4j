@@ -6,7 +6,7 @@ cdp4j Release Notes
 * :new: Added **async** support to cdp4j. All devtools command could be invoked asynchronously (e.g. session.getAsyncCommand().getNetwork().getCookies().thenApply(cookies -> { });).
 * :new: Added FFmpeg video recorder, uses FFmpeg [slideshow](https://trac.ffmpeg.org/wiki/Slideshow) feature
 * :new: Added H264 realtime video recorder, uses Cisco [openh264](https://github.com/cisco/openh264) & [IHMC Java Video Codecs](https://github.com/ihmcrobotics/ihmc-video-codecs)
-* :new: Updated devtools protocol to r953906 (Dec 23, 2021).
+* :new: Updated devtools protocol to r971358 (Feb 15, 2021).
 * :new: Added toString method to type, event and result classes (auto generated).
 * :new: Added setRegisteredEventListeners to Session class. cdp4j parse and process all event registered if related domain (Network, Runtime....) is enabled.
   With this new method, cdp4j process and parse only listened events. This new feature minimize CPU and memory usage. 

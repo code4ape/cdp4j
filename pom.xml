@@ -41,8 +41,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <source>11</source>
+          <target>11</target>
           <annotationProcessorPaths>
             <annotationProcessorPath>
               <groupId>com.vimeo.stag</groupId>
@@ -312,6 +312,11 @@
           <artifactId>netty-codec-socks</artifactId>
         </exclusion>
       </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>io.webfolder</groupId>
+      <artifactId>quickjs</artifactId>
+      <version>1.0.0</version>
     </dependency>
   </dependencies>
   <properties>
